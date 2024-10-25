@@ -171,10 +171,6 @@ function DashboardSidebarSubNavigation({
 
         const isSelected = isPageItemSelected(navigationItem, basePath, pathname);
 
-        if (process.env.NODE_ENV !== 'production' && isSelected && selectedItemId) {
-          console.warn(`Duplicate selected path in navigation: ${navigationItemFullPath}`);
-        }
-
         if (isSelected && !selectedItemId) {
           selectedItemId = navigationItemId;
         }
